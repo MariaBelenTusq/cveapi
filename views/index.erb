@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>CVE api</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet prefetch">
+    <link rel="stylesheet" type="text/css"  href="/stylesheet/index.css"">
+  </head>
+  <body>
+    <div class="flex-center position-ref full-height">
+      <div class="top-right links">
+      </div>
+      <div class="content">
+        <div class="title m-b-md">
+            CVE API
+        </div>
+        <div class="m-b-md">
+          <article>
+            <div>application/json</div>
+            <pre>http://<%= bind %>:<%= port %>/cve?target=KEYWORD</pre>
+          </article>
+          <article>
+            <div>application/json</div>
+            <pre>http://<%= bind %>:<%= port %>/cve?target=KEYWORD&year=YEAR</pre>
+          </article>
+          <article>
+            <div>application/json</div>
+            <pre>curl http://<%= bind %>:<%= port %>/cve?target=KEYWORD&year=latest</pre>
+          </article>
+          <article>
+            <div>text/html</div>
+            <pre>http://<%= bind %>:<%= port %>/cve?target=KEYWORD&year=YEAR&display=true</pre>
+          </article>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
